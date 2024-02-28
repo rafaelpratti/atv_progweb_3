@@ -3,34 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <style>
+
+        *{
+            font-family: "Nunito", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        div{
+            width: 300px;
+            margin: 10px, auto, 10px, auto;
+            padding: 10px, 20px, 10px, 20px;
+            background-color:rgb(233, 233, 233);
+            color: rgb(0, 0, 0)
+        }
+
+        h1{
+            text-align: center;
+        }
+
         fieldset{
-            background-color: #eeeeee;
+            border: 0px;
         }
 
         legend{
-            background-color: gray;
-            color: white;
-            padding: 5px 10px;
+            font-size: 30px;
         }
 
-        input{
-            margin: 5px;
+        button{
+            width: 270px;
+            font-size: 20px;
         }
+
     </style>
 </head>
 <body>
-    <h1>Formulário</h1>
+    
+    <div>
+        <h1>Cadastrar Usuário</h1>
+        
+        <form action="index.html" method="post"></form>
+            <fieldset class="a">
+                <legend>Dados Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"><br>
 
-    <form>
-        <fieldset>
-            <legend>Cadastro</legend>
-            <label for="fname">Primeiro nome:</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="lname"></label>
-            <input type="text" id="lname" name="lname">
-        </fieldset>
-    </form>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha"><br>
+                <label for="confirma_senha">Confirmar senha:</label>
+                <input type="password" name="confirma_senha" id="confirma_senha"><br>
+
+                <label for="idade">Idade:</label><br>
+                <input type="radio" id="acima_17" name="idade" value="acima_17">
+                <label for="acima_17">Acima 17</label> <br>
+                <input type="radio" id="abaixo_17" name="idade" value="abaixo_17">
+                <label for="abaixo_17">Abaixo ou igual a 17</label>
+
+            </fieldset>
+
+            <fieldset class="b">
+                <legend>Perfil</legend>
+                    
+                <label for="desc">Descrição:</label>
+                <textarea name="Descrição" id="desc" cols="30" rows="5"></textarea>
+
+                <label for="perfil_trabalho">Perfil de trabalho:</label>
+                <select name="Perfil" id="perfil_trabalho">
+                    <option value="Front-end">Front-end</option>
+                    <option value="Back-end">Back-end</option>
+                    <option value="Full-stack">Full-stack</option>
+                </select> <br>
+
+                <label for="interesses">Interesses:</label> <br>
+                <input type="checkbox" name="programador" id="programador">
+                <label for="programador">Programador</label> <br>
+                <input type="checkbox" name="design" id="design">
+                <label for="design">Design</label> <br>
+                <input type="checkbox" name="analista" id="analista">
+                <label for="analista">Analista</label> <br>
+
+                <button> Enviar dados</button>    
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
